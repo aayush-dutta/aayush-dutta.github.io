@@ -1,5 +1,31 @@
+/* Default Light Mode */
+:root{
+	--primary-color: #fff;
+	--h2-color: #393939;
+	--h3-color:#494949;
+	--test-red: red;
+	--link-color:#39c;
+	--link-hover-color:#069;
+	--link-small-color:#777;
+	--link-small-hover-color:#777;
+	--blockquote-line-color:#e5e5e5;
+}
+
+/* Dark Mode */
+[theme="dark"]{
+	--primary-color: #fff;
+	--h2-color: #393939;
+	--h3-color:#494949;
+	--test-red: red;
+	--link-color:#39c;
+	--link-hover-color:#069;
+	--link-small-color:#777;
+	--link-small-hover-color:#777;
+	--blockquote-line-color:#e5e5e5;
+}
+
 body {
-  background-color: #fff;
+  background-color: var(--primary-color);
   padding:50px;
   font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color:#595959;
@@ -25,33 +51,33 @@ h1 {
 }
 
 h2 {
-  color:#393939;
+  color:var(--h2-color);
   font-weight: 500;
 }
 
 h3, h4, h5, h6 {
-  color:#494949;
+  color:var(--h3-color);
   font-weight: 500;
 }
 
 a {
-  color:#39c;
+  color:var(--link-color);
   text-decoration:none;
 }
 
 a:hover {
-  color:#069;
+  color:var(--link-hover-color);
 }
 
 a small {
   font-size:11px;
-  color:#777;
+  color:var(--link-small-color);
   margin-top:-0.3em;
   display:block;
 }
 
 a:hover small {
-  color:#777;
+  color:var(--link-small-hover-color);
 }
 
 .wrapper {
@@ -60,7 +86,7 @@ a:hover small {
 }
 
 blockquote {
-  border-left:1px solid #e5e5e5;
+  border-left:1px solid var(--blockquote-line-color);
   margin:0;
   padding:0 0 0 20px;
   font-style:italic;
