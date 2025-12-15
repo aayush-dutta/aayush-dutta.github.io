@@ -287,6 +287,31 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+/* Uniform list item style for dropdown, with triangle indicator */
+li > details > summary {
+  list-style: none;
+  display: list-item;
+  font-size: inherit;
+  font-weight: inherit;
+  margin-left: 0;
+  cursor: pointer;
+  position: relative;
+}
+li > details > summary::before {
+  content: '\25B6'; /* Right-pointing triangle */
+  display: inline-block;
+  margin-right: 0.5em;
+  transition: transform 0.2s;
+}
+li > details[open] > summary::before {
+  content: '\25BC'; /* Down-pointing triangle */
+}
+
+/* Remove extra indentation for nested lists in details */
+li > details > ul {
+  margin-left: 1.5em;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
